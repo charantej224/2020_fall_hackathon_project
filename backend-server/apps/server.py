@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask import request
 from services.search_query import search_for_youtube, search_for_google
+from services.scoring_pattern import get_sentence_similarity
 
 app = Flask(__name__)
 
@@ -16,9 +17,12 @@ def get_answer():
     return jsonify({'tasks': 'tasks'})
 
 
-@app.route('/api/v1/article/score', methods=['POST'])
-def get_score():
-    return jsonify({'tasks': 'tasks'})
+@app.route('/api/v1/article/answer/validate', methods=['POST'])
+def validate_answer():
+    input_request = request.json
+    answer, score = get_sentence_similarity(input_request['user_answer'], input_request['actual_answer'])
+    response = {'is_true': answer, 'similarity_score': score}
+    return jsonify(response)
 
 
 @app.route('/api/v1/article/getvideoref', methods=['GET'])
