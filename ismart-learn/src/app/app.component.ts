@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ismart-learn';
+  getName(){
+    return "charan"
+  }
+  obj = {
+    name: this.getName(),
+    title: this.title,
+    url: window.location.href
+  }
 }
