@@ -1,5 +1,8 @@
-from  bert_summarizer.summarizer.question_answer import get_answer_for_question
-from bert_summarizer.summarizer.summary_bert import get_summary_from_bert
+from bert_summarizer.summarizer.summary_bert_question import get_summary_from_bert, get_answer_for_question
+# from bert_summarizer.summarizer.question_answer import get_answer_for_question
+import textwrap
+from bert_summarizer.bertquestions.bert_cancer_question_answer import  answer_question
+wrapper = textwrap.TextWrapper(width=160)
 
 question = 'What is machine learning?'
 
@@ -12,10 +15,28 @@ data and make better decisions in the future based on the examples that we provi
 summary = get_summary_from_bert(context)
 print("....BERT Summary....")
 print(summary)
-# answer1 = get_answer_for_question(question, context)
-# answer2 = get_answer_for_question(question, summary)
-# print("Answer from Original Content\n",answer1)
-# print("Answer from BERT summary\n",answer2)
 
 
-# https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/
+generated_answer1 = answer_question(question, context)
+generated_answer2 = answer_question(question, summary)
+
+print('--------------------------------------------')
+print("Abstract Fed to the QA System")
+print('--------------------------------------------')
+print(wrapper.fill(summary))
+print('--------------------------------------------')
+print("Question Asked to System")
+print('--------------------------------------------')
+print(question)
+print('system answer given by user from Original Text')
+print('--------------------------------------------')
+print(generated_answer1)
+print('--------------------------------------------')
+print(question)
+print('system answer given by user from BERT Summary')
+print('--------------------------------------------')
+print(generated_answer2)
+
+
+
+

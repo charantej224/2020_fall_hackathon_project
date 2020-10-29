@@ -1,0 +1,63 @@
+A system of interconnected computers and computerized peripherals such as printers is called computer network. This interconnection among computers
+facilitates information sharing among them. Computers may connect to each other by either wired or wireless media.
+1) Point-to-Point
+Point-to-point networks contains exactly two hosts such as computer, switches or routers, servers connected back to back using a single piece of cable.
+Often, the receiving end of one host is connected to sending end of the other and vice-versa. If the hosts are connected point-to-point logically,
+then may have multiple intermediate devices. But the end hosts are unaware of underlying network and see each other as if they are connected directly.
+2) Bus Topology
+In case of Bus topology, all devices share single communication line or cable.Bus topology may have problem while multiple hosts sending data at the
+same time. Therefore, Bus topology either uses CSMA/CD technology or recognizes one host as Bus Master to solve the issue. It is one of the simple forms
+ of networking where a failure of a device does not affect the other devices. But failure of the shared communication line can make all other devices
+ stop functioning. Both ends of the shared channel have line terminator. The data is sent in only one direction and as soon as it reaches the extreme end,
+ the terminator removes the data from the line.
+3) Star Topology
+All hosts in Star topology are connected to a central device, known as hub device, using a point-to-point connection.
+ That is, there exists a point to point connection between hosts and hub. As in Bus topology, hub acts as single point of failure. If hub fails,
+ connectivity of all hosts to all other hosts fails. Every communication between hosts, takes place through only the hub.Star topology is not expensive
+ as to connect one more host, only one cable is required and configuration is simple.
+4) Ring Topology
+In ring topology, each host machine connects to exactly two other machines, creating a circular network structure. When one host tries to communicate
+or send message to a host which is not adjacent to it, the data travels through all intermediate hosts. To connect one more host in the existing structure,
+ the administrator may need only one more extra cable. Failure of any host results in failure of the whole ring.Thus, every connection in the ring is a
+ point of failure. There are methods which employ one more backup ring.
+ 5) Mesh Topology
+In this type of topology, a host is connected to one or multiple hosts.This topology has hosts in point-to-point connection with every other host or may
+also have hosts which are in point-to-point connection to few hosts only. Hosts in Mesh topology also work as relay for other hosts which do not have
+direct point-to-point links
+6) Tree Topology
+Also known as Hierarchical Topology, this is the most common form of network topology in use presently.This topology imitates as extended Star topology
+and inherits properties of bus topology. This topology divides the network in to multiple levels/layers of network. Mainly in LANs, a network is
+bifurcated into three types of network devices. The lowermost is access-layer where computers are attached. The middle layer is known as distribution
+layer, which works as mediator between upper layer and lower layer. The highest layer is known as core layer, and is central point of the network, i.e.
+root of the tree from which all nodes fork. All neighboring hosts have point-to-point connection between them.Similar to the Bus topology, if the root
+goes down, then the entire network suffers even.though it is not the single point of failure. Every connection serves as point of failure, failing of which divides the network into unreachable segment.
+7) Hybrid Topology
+A network structure whose design contains more than one topology is said to be hybrid topology. Hybrid topology inherits merits and demerits of
+all the incorporating topologies.
+OSI Model: Open System Interconnect is an open standard for all communication systems. OSI model is established by International Standard Organization (ISO).
+ This model has seven layers:
+
+Application Layer: This layer is responsible for providing interface to the application user. This layer encompasses protocols which directly
+interact with the user.
+
+Presentation Layer: This layer defines how data in the native format of remote host should be presented in the native format of host.
+
+Session Layer: This layer maintains sessions between remote hosts. For example, once user/password authentication is done, the remote host maintains
+this session for a while and does not ask for authentication again in that time span.
+
+Transport Layer: This layer is responsible for end-to-end delivery between hosts.
+Network Layer: This layer is responsible for address assignment and uniquely addressing hosts in a network.
+Data Link Layer: This layer is responsible for reading and writing data from and onto the line. Link errors are detected at this layer.
+Physical Layer: This layer defines the hardware, cabling wiring, power output, pulse rate etc.
+
+Internet Model:
+Internet uses TCP/IP protocol suite, also known as Internet suite. This defines Internet Model which contains four layered architecture.
+OSI Model is general communication model but Internet Model is what the internet uses for all its communication.The internet is independent of its
+underlying network architecture so is its Model. This model has the four layers:
+
+Application Layer: This layer defines the protocol which enables user to interact with the network.For example, FTP, HTTP etc.
+Transport Layer: This layer defines how data should flow between hosts. Major protocol at this layer is Transmission Control Protocol (TCP). This layer ensures data delivered between hosts is in-order and is responsible for end-to-end delivery.
+Internet Layer: Internet Protocol (IP) works on this layer. This layer facilitates host addressing and recognition. This layer defines routing.
+Link Layer: This layer provides mechanism of sending and receiving actual data.Unlike its OSI Model counterpart, this layer is independent of underlying network architecture and hardware.
+
+

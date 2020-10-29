@@ -1,6 +1,8 @@
 from newspaper import fulltext
 import requests
 from summarizer import Summarizer
+import textwrap
+from bert_summarizer.bertquestions.bert_cancer_question_answer import  answer_question
 
 def get_summary_from_bert(input_content):
     """
@@ -13,4 +15,7 @@ def get_summary_from_bert(input_content):
     summary = "".join(result)
     return summary
 
-
+def get_answer_for_question(question, context):
+    wrapper = textwrap.TextWrapper(width=160)
+    generated_answer = answer_question(question, context)
+    return generated_answer

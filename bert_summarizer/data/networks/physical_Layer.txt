@@ -1,0 +1,40 @@
+Physical layer in the OSI model plays the role of interacting with actual hardware and signaling mechanism. Physical layer is the only layer of OSI network
+model which actually deals with the physical connectivity of two different stations. This layer defines the hardware equipment, cabling, wiring,
+frequencies, pulses used to represent binary signals etc. Physical layer provides its services to Data-link layer. Data-link layer hands over frames to
+physical layer. Physical layer converts them to electrical pulses, which represent binary data.The binary data is then sent over the wired or wireless
+media.
+Multiplexing is a technique to mix and send multiple data streams over a single medium. This technique requires system hardware called multiplexer (MUX)
+ for multiplexing the streams and sending them on a medium, and de-multiplexer (DMUX) which takes information from the medium and distributes to different
+ destinations. Data or information can be stored in two ways, analog and digital. For a computer to use the data, it must be in discrete digital form.
+ Similar to data, signals can also be in analog and digital form. To transmit data digitally, it needs to be first converted to digital form.
+ Microphones create analog voice and camera creates analog videos, which are treated is analog data. To transmit this analog data over digital signals,
+ we need analog to digital conversion. Analog data is a continuous stream of data in the wave form whereas digital data is discrete.
+ To convert analog wave into digital data, we use Pulse Code Modulation (PCM).
+Amplitude Modulation
+In this modulation, the amplitude of the carrier signal is modified to reflect the analog data. Amplitude modulation is implemented by means of a
+ multiplier. The amplitude of modulating signal (analog data) is multiplied by the amplitude of carrier frequency, which then reflects analog data.
+Frequency Modulation
+In this modulation technique, the frequency of the carrier signal is modified to reflect the change in the voltage levels of the modulating
+signal (analog data). The amplitude and phase of the carrier signal are not altered.
+Phase Modulation
+In the modulation technique, the phase of carrier signal is modulated in order to reflect the change in voltage (amplitude) of analog data signal.
+Phase modulation is practically similar to Frequency Modulation, but in Phase modulation frequency of the carrier signal is not increased. Frequency of
+carrier is signal is changed (made dense and sparse) to reflect voltage change in the amplitude of modulating signal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

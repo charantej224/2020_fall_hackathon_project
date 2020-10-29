@@ -1,0 +1,8 @@
+What is mean by Clustering?
+What Are Unsupervised Machine Learning Techniques?
+Why Clustering?
+What are  the different types of clustering algorithms?
+Difference between Density-based and Distributed-based clustering algorithms?
+What is the clustering algorithm developed based on Centroid-based?
+When to use clustering?
+What are the limitations of K-means algorithm?

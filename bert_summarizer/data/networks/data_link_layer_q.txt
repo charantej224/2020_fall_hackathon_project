@@ -1,0 +1,8 @@
+What is the second layer of OSI Layered Model?
+What is the responsibility of Data link layer?
+What are the functionality of Data-link Layer?
+What is Error Detection?
+How many ways error correction can be done?
+What are those error correction techniques?
+
+

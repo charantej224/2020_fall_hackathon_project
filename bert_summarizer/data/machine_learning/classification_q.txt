@@ -1,0 +1,16 @@
+What is mean by Classfication?
+What is an example of Classification?
+When Will You Use Classification over Regression?
+What are the performance Metrics for classification Problems?
+What is the difference between classification and regression?
+How Do You Handle Missing or Corrupted Data in a Dataset?
+What is mean by multi-label classification?
+What are the examples of multi-label classification?
+What are the applications of Classification Algorithms?
+What are the differences between Lazy learners and Eager learners?
+What are the classification algorithms?
+What are the types of non-linear classification algorithms?
+What are the differences between Classification and regression?
+What is mean by Confusion matrix?
+
+
