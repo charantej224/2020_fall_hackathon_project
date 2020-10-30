@@ -1,5 +1,6 @@
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-course-overview',
@@ -8,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseOverviewComponent implements OnInit {
 
-  constructor() { }
+  contentObj:any;
+  data:string;
+
+  constructor(private course:CourseService) {
+      this.data =  "testing service";
+      course.getServiceData().subscribe(response => console.log(response))
+   }
+   
+
   buttonName = 'enable'
   disable = true
-  data = "Charan"
+  
 
   ngOnInit(): void {
   }
@@ -24,6 +33,8 @@ export class CourseOverviewComponent implements OnInit {
   }
 
   toggle() {
+    this.contentObj = this.course.getContentJson();
+    this.data = this.contentObj.name;
     if(this.disable){
       this.disable = false;
       this.buttonName = 'disable';

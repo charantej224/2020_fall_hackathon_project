@@ -1,17 +1,8 @@
 <app-header></app-header>
-<p>course-overview works!</p>
-property binding : <input type="text" #input [disabled]=disable>
-<br />
-Interpolation : <input type="text" #input disabled={{disable}}>
-<br />
-<button (click)="toggle()">{{buttonName}}</button>
 
+<div class="container">
+    <p>This is some text.</p>
+    <p>This is another text.</p>
+</div>
 
-<form #userForm="ngForm" (ngSubmit)="getUserFormValues(userForm.value)">
-    <input type="text" ngModel name="name" placeholder="Enter your name" /><br />
-    <input type="text" ngModel name="email" placeholder="Enter your email" /><br />
-    <input type="password" ngModel name="password" placeholder="Enter your password" /><br />
-    <input type="password" ngModel name="confirmPassword" placeholder="Confirm your password" /><br />
-    <button mat-button color="primary">Submit</button>
-</form>
-<app-footer [footerName]="data"></app-footer>
+<app-footer></app-footer>
