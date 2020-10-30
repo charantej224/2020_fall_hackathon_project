@@ -1,3 +1,4 @@
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,7 @@ export class CourseOverviewComponent implements OnInit {
   constructor() { }
   buttonName = 'enable'
   disable = true
+  data = "Charan"
 
   ngOnInit(): void {
   }

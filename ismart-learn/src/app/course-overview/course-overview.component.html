@@ -12,6 +12,6 @@ Interpolation : <input type="text" #input disabled={{disable}}>
     <input type="text" ngModel name="email" placeholder="Enter your email" /><br />
     <input type="password" ngModel name="password" placeholder="Enter your password" /><br />
     <input type="password" ngModel name="confirmPassword" placeholder="Confirm your password" /><br />
-    <button>Submit</button>
+    <button mat-button color="primary">Submit</button>
 </form>
-<app-footer></app-footer>
+<app-footer [footerName]="data"></app-footer>
