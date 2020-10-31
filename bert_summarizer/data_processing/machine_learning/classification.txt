@@ -1,0 +1,34 @@
+classification may be defined as the process of predicting class or category from observed values or given data points.
+the categorized output can have the form such as “black” or “white” or “spam” or “no spam”.
+mathematically, classification is the task of approximating a mapping function  f  from input variables  x  to output variables  y .
+it is basically belongs to the supervised machine learning in which targets are also provided along with the input data set.
+an example of classification problem can be the spam detection in emails.
+there can be only two categories of output, “spam” and “no spam”; hence this is a binary type classification.
+to implement this classification, we first need to train the classifier. for this example, “spam” and “no spam” emails would be used as the training data. after successfully train the classifier, it can be used to detect an unknown email.
+classification is used when your target is categorical, while regression is used when your target variable is continuous.
+both classification and regression belong to the category of supervised machine learning algorithms.
+there are four parameters will decide performance of the classification algorithm such as accuracy, f1 score, precision, recall and specificity
+classification is used to produce discrete results, classification is used to classify data into some specific categories .for example classifying
+e mails into spam and non spam categories. whereas, we use regression analysis when we are dealing with continuous data, for example predicting
+stock prices at a certain point of time.
+one of the easiest ways to handle missing or corrupted data is to drop those rows or columns or replace them entirely with some other value.there are two
+useful methods in pandas first one  is  isnull  , dropna   will help to find the columns/rows with missing data and drop them, second one is
+fillna   will replace the wrong values with a placeholder value.
+multi label classification refers to those classification tasks that have two or more class labels, where one or more class labels may be predicted
+for each example. consider the example of photo classification, where a given photo may have multiple objects in the scene and a model may predict the presence of multiple known objects in the photo, such as “bicycle,” “apple,” “person,” etc.
+in machine learning, classification is a supervised learning concept which basically categorizes a set of data into classes. the most common classification
+problems are – speech recognition, face detection, handwriting recognition, document classification, etc. it can be either a binary classification problem
+or a multi class problem too.
+lazy learners simply store the training data and wait until a testing data appear. when it does, classification is conducted based on the most related data
+in the stored training data. compared to eager learners, lazy learners have less training time but more time in predicting. eager learners construct a
+classification model based on the given training data before receiving data for classification. it must be able to commit to a single hypothesis that covers the entire instance space. due to the model construction, eager learners take a long time for train and less time to predict.
+there are two classification algorithms linear models and non linear models.
+logistic regression and support machine algorithms
+k nearest neighbors  knn , kernel support vector machines  svm ,naïve bayes,,decision tree classification, random forest classification.
+classification predictive modeling problems are different from regression predictive modeling problems.
+classification is the task of predicting a discrete class label. regression is the task of predicting a continuous quantity.
+a classification algorithm may predict a continuous value, but the continuous value is in the form of a probability for a class label.a regression algorithm may predict a discrete value, but the discrete value in the form of an integer quantity.
+classification predictions can be evaluated using accuracy, whereas regression predictions cannot.
+regression predictions can be evaluated using root mean squared error, whereas classification predictions cannot.
+a table with the predicted output versus the expected output is the easiest way to measure the performance of a classification problem,
+where the output can be of two or more type of classes.

@@ -1,5 +1,4 @@
 from bert_summarizer.summarizer.summary_bert_question import get_summary_from_bert, get_answer_for_question
-# from bert_summarizer.summarizer.question_answer import get_answer_for_question
 import textwrap
 from bert_summarizer.bertquestions.bert_cancer_question_answer import  answer_question
 wrapper = textwrap.TextWrapper(width=160)

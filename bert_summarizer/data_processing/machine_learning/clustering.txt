@@ -1,0 +1,51 @@
+clustering problems involve data to be divided into subsets. these subsets, also called clusters, contain data that are similar to each other.
+different clusters reveal different details about the objects, unlike classification or regression.
+there are two techniques used in unsupervised learning  clustering and association.
+clustering is very much important as it determines the intrinsic grouping among the unlabeled data present.
+there are no criteria for a good clustering. it depends on the user, what is the criteria they may use which satisfy their need.
+for instance, we could be interested in finding representatives for homogeneous groups  data reduction , in finding “natural clusters” and describe their unknown properties  “natural” data types , in finding useful and suitable groupings  “useful” data classes  or in finding unusual data objects  outlier detection .
+this algorithm must make some assumptions which constitute the similarity of points and each assumption make different and equally valid clusters.
+1. difference between density based and distributed based clustering algorithms?
+2. what is the clustering algorithm developed based on centroid based?
+
+
+types of clustering algorithms there are different types of clustering algorithms that handle all kinds of unique data.
+
+1. density based
+in density based clustering, data is grouped by areas of high concentrations of data points surrounded by areas of low concentrations of data points.
+basically the algorithm finds the places that are dense with data points and calls those clusters.
+the great thing about this is that the clusters can be any shape. you aren t constrained to expected conditions.
+the clustering algorithms under this type don t try to assign outliers to clusters, so they get ignored.
+optics stands for ordering points to identify the clustering structure. it s a density based algorithm similar to dbscan,
+but it s better because it can find meaningful clusters in data that varies in density.
+
+2. distribution based
+with a distribution based clustering approach, all of the data points are considered parts of a cluster based on the probability that they belong to
+a given cluster. it works like this  there is a center point, and as the distance of a data point from the center increases, the probability of it
+being a part of that cluster decreases. if you aren t sure of how the distribution in your data might be, you should consider a different type of
+algorithm.
+
+3. centroid based
+centroid based clustering is the one you probably hear about the most. it s a little sensitive to the initial parameters you give it, but it s fast and
+efficient. these types of algorithms separate data points based on multiple centroids in the data. each data point is assigned to a
+cluster based on its squared distance from the centroid. this is the most commonly used type of clustering. k means clustering is the most commonly used
+clustering algorithm. it s a centroid based algorithm and the simplest unsupervised learning algorithm
+
+4. hierarchical based
+hierarchical based clustering is typically used on hierarchical data, like you would get from a company database or taxonomies. it builds a tree of
+clusters so everything is organized from the top down. this is more restrictive than the other clustering types, but it s perfect for specific
+kinds of data sets
+
+clustering is especially useful for exploring data you know nothing about. it might take some time to figure out which type of clustering algorithm
+works the best, but when you do, you ll get invaluable insight on your data. you might find connections you never would have thought of.  some real world
+applications of clustering include fraud detection in insurance, categorizing books in a library, and customer segmentation in marketing. it can also be used in larger problems,
+like earthquake analysis or city planning. clustering has a large no. of applications spread across various domains. some of the most popular applications of clustering are 
+recommendation engines, market segmentation, social network analysis, search result grouping, medical imaging, image segmentation and anomaly detection.
+
+
+the following are few limitations with k means clustering 
+sometimes, it is quite tough to forecast the number of clusters, or the value of k.
+the output is highly influenced by original input, for example, the number of clusters.
+an array of data substantially hits the concluding outcomes.
+in some cases, clusters show complex spatial views, then executing clustering is not a good choice.
+also, rescaling is sometimes conscious, it can’t be done by normalization or standardization of data points, the output gets changed entirely.
