@@ -1,10 +1,6 @@
 import textwrap
-import torch
-from services.bert_question_answer import  answer_question
-from newspaper import fulltext
-import requests
+from services.bert_question_answer import answer_question
 from summarizer import Summarizer
-
 
 
 def get_summary_from_bert(input_content):
@@ -19,8 +15,8 @@ def get_summary_from_bert(input_content):
     summary = "".join(result)
     return summary
 
+
 def get_answer_for_question(question, content):
     wrapper = textwrap.TextWrapper(width=160)
     generated_answer = answer_question(question, content)
     return generated_answer
-
