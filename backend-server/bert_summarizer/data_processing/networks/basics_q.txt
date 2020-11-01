@@ -1,5 +1,0 @@
-What is mean by computer networks?
-What are the topologies in computer network?
-What is OSI Model?
-How many layers in OSI Model?
-How many layers in Internet Model?

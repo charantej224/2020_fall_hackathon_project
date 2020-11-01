@@ -1,8 +1,0 @@
-Whata are the performance Metrics for Regression Problems?
-What are the types of regression techniques?
-What is linear regression?
-Can we use linear regression for time series analysis?
-What are outliers?
-How do you detect and treat them?
-What are the differences between Linear Regression and Multiple Regression?
-

@@ -1,9 +1,0 @@
-What is dimension reduction in Machine Learning?
-What is high dimensional data?
-What are the issues with the high dimensional data?
-What are the dimensionality reduction methods?
-How do we perform dimensionality reduction?
-Who proposed PCA?
-What is dimensionality reduction all about?
-What are the components of dimensionality reduction?
-What are the advantages of Dimensionality Reduction?

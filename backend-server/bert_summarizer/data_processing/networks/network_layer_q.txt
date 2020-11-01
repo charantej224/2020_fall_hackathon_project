@@ -1,7 +1,0 @@
-What is the third layer in OSI model architecture?
-What is the responsibility of network layer?
-What are the functionalities of network layer?
-What are features of network layer?
-How many types of network address are there  in network layer?
-What are the network layer protocol?
-
