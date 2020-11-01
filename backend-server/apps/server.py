@@ -2,19 +2,24 @@ from flask import Flask, jsonify
 from flask import request
 from services.search_query import search_for_youtube, search_for_google
 from services.scoring_pattern import get_sentence_similarity
+from services.text_processing import get_summary_from_bert, get_answer_for_question
+from services.bert_question_answer import answer_question
+
 
 app = Flask(__name__)
 
-
-@app.route('/api/v1/article/post', methods=['POST'])
+@app.route('/api/v1/article/summary', methods=['POST'])
 def get_summary():
-    print(request.json)
-    return jsonify({'tasks': 'tasks'})
+    input_request = request.json
+    summarized_content = get_summary_from_bert(input_request['content'])
+    return jsonify({'summary': summarized_content})
 
 
 @app.route('/api/v1/article/answer', methods=['POST'])
 def get_answer():
-    return jsonify({'tasks': 'tasks'})
+    input_request = request.json
+    answer = get_answer_for_question(input_request['question'], input_request['content'])
+    return jsonify({'answer': answer})
 
 
 @app.route('/api/v1/article/answer/validate', methods=['POST'])
