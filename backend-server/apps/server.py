@@ -3,10 +3,9 @@ from flask import request
 from services.search_query import search_for_youtube, search_for_google
 from services.scoring_pattern import get_sentence_similarity
 from services.text_processing import get_summary_from_bert, get_answer_for_question
-from services.bert_question_answer import answer_question
-
 
 app = Flask(__name__)
+
 
 @app.route('/api/v1/article/summary', methods=['POST'])
 def get_summary():
