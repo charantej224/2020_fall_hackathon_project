@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  getContentJson(){
-    return {
-      "name":"machine learning",
-      "course":"introduction to machine learning"
-    }
+  getContentJson(): Observable<any> {
+    return this.httpClient.get('assets/configuration/content.json');
   }
 
   getServiceData(){

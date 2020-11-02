@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "ismart-learn"
+  "defaultProject": "ismart-learn",
+  "cli": {
+    "analytics": "fb9b3209-5ad4-4286-bb59-1eb90a39bb5f"
+  }
 }

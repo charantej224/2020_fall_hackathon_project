@@ -12,17 +12,18 @@ export class CourseOverviewComponent implements OnInit {
   contentObj:any;
   data:string;
 
-  constructor(private course:CourseService) {
-      this.data =  "testing service";
-      course.getServiceData().subscribe(response => console.log(response))
+  constructor(private course: CourseService) {
    }
-   
 
   buttonName = 'enable'
   disable = true
-  
 
-  ngOnInit(): void {
+
+  ngOnInit() {
+    this.course.getContentJson().subscribe(data => {
+      this.contentObj = data;
+      console.log(this.contentObj);
+    });
   }
 
   getUserFormValues(userform){

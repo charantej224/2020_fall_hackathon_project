@@ -1,8 +1,14 @@
-<app-header></app-header>
-
 <div class="container">
-    <p>This is some text.</p>
-    <p>This is another text.</p>
+  <div class="row">
+    <div class="col-sm-4"><b>{{contentObj?.machine_learning?.name}}</b></div>
+    <div class="col-sm-4">{{contentObj?.machine_learning?.notes}}</div>
+    <div class="col-sm-4"><a routerLink='/module-overview' [queryParams]="{content:'deep_learning'}">Go to Course</a></div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-4"><b>{{contentObj?.deep_learning?.name}}</b></div>
+  <div class="col-sm-4">{{contentObj?.deep_learning?.notes}}</div>
+  <div class="col-sm-4"><a routerLink= '/module-overview' [queryParams]="{content: 'machine_learning'}">Go to Course</a></div>
+</div>
 </div>
 
-<app-footer></app-footer>

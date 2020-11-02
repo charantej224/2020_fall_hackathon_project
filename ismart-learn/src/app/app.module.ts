@@ -10,14 +10,16 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ModuleOverviewComponent } from './module-overview/module-overview.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseOverviewComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ModuleOverviewComponent
   ],
   imports: [
     BrowserModule,
