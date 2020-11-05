@@ -16,7 +16,7 @@ def answer_question(question, answer_text):
     # Apply the tokenizer to the input text, treating them as a text-pair.
     input_ids = tokenizer.encode(question, answer_text)
     # Report how long the input sequence is.
-    print('Query has {:,} tokens.\n'.format(len(input_ids)))
+    # print('Query has {:,} tokens.\n'.format(len(input_ids)))
     # ======== Set Segment IDs ========
     # Search the input_ids for the first instance of the `[SEP]` token.
     sep_index = input_ids.index(tokenizer.sep_token_id)
