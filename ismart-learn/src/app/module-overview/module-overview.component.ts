@@ -29,7 +29,7 @@ export class ModuleOverviewComponent implements OnInit {
           console.log(this.moduleObj);
         } else {
           Object.keys(data.machine_learning.modules).forEach(key => {
-            this.modulesList.push(key);g
+            this.modulesList.push(key);
           this.moduleObj.push(data.machine_learning.modules[key]);
         });
         }
