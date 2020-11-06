@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'module-overview',
     component: ModuleOverviewComponent
-  }
+  },
 ];
 
 @NgModule({

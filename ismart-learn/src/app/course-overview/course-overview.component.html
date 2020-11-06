@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-4"><b>{{contentObj?.machine_learning?.name}}</b></div>
-    <div class="col-sm-4">{{contentObj?.machine_learning?.notes}}</div>
+    <div class="col-sm-6 name"><b>{{contentObj?.machine_learning?.name}}</b></div>
     <div class="col-sm-4"><a routerLink='/module-overview' [queryParams]="{content:'deep_learning'}">Go to Course</a></div>
+    <div class="col-sm-12 notes">{{contentObj?.machine_learning?.notes}}</div>
+    
   </div>
 
   <div class="row">
-  <div class="col-sm-4"><b>{{contentObj?.deep_learning?.name}}</b></div>
-  <div class="col-sm-4">{{contentObj?.deep_learning?.notes}}</div>
+  <div class="col-sm-6 name"><b>{{contentObj?.deep_learning?.name}}</b></div>
   <div class="col-sm-4"><a routerLink= '/module-overview' [queryParams]="{content: 'machine_learning'}">Go to Course</a></div>
+  <div class="col-sm-12 notes">{{contentObj?.deep_learning?.notes}}</div>
 </div>
 </div>
 

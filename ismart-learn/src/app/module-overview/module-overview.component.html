@@ -1,19 +1,58 @@
-<div class="content">
-  <div class="row" *ngFor = "let module of moduleObj">
-    <div class="  col-sm-10 ml-3">
-      <b> {{module.name}}</b>
+<!-- <mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+  <mat-drawer-content>div class="content">
+    <div class="row" *ngFor = "let module of moduleObj">
+      <div class="  col-sm-10 ml-3">
+        <b> {{module.name}}</b>
+      </div>
+      <div class="col-sm-10 ml-3">
+        {{module.content}}
+      </div>
+      <div class="col-sm-10 ml-3" *ngFor="let question of module.questions">
+        <p>{{question}}</p>
+      </div>
+      <div class="col-sm-10 ml-3" *ngFor= "let answer of module.answers;let index=index">
+        <input type="text" style="width: 1000px;"[(ngModel)]="module.answers[index]" >
+      </div>
+      <div class="col-sm-10 mt-3">
+        <button (click)="submitData(module)">Submit</button>
+      </div>
     </div>
-    <div class="col-sm-10 ml-3">
-      {{module.content}}
-    </div>
-    <div class="col-sm-10 ml-3" *ngFor="let question of module.questions">
-      <p>{{question}}</p>
-    </div>
-    <div class="col-sm-10 ml-3" *ngFor= "let answer of module.answers;let index=index">
-      <input type="text" style="width: 1000px;"[(ngModel)]="module.answers[index]" >
-    </div>
-    <div class="col-sm-10 mt-3">
-      <button (click)="submitData(module)">Submit</button>
-    </div>
+  </mat-drawer-content>
+</mat-drawer-container> -->
+
+<mat-sidenav-container class="example-container" autosize>
+  <mat-sidenav class= "side-nav" mode="side" opened position= "start">
+  <div class= "container navText">
+    <span>Contents</span>
   </div>
-</div>
+  <hr>
+  <div>
+    <mat-nav-list class= "listNav">
+      <div>
+      <mat-list-item>
+        <div class="content">
+          <div class="row" *ngFor = "let module of modulesList;let i = index">
+            <div class = "navContent">
+              <b> <a href="javascript:void(0);" (click)="openModule(i)">{{module}}</a></b>
+            </div>
+          </div>
+        </div> 
+      </mat-list-item>
+    </div>
+    </mat-nav-list>
+  </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+   <div class="col-sm-10 ml-3">
+              {{selectedModule?.content}}
+            </div>
+            <div class="col-sm-10 ml-3" *ngFor="let question of selectedModule?.questions">
+              <p>{{question}}</p>
+            </div>
+            <div class="col-sm-10 ml-3" *ngFor= "let answer of selectedModule?.answers;let index=index">
+              <input type="text" style="width: 1000px;"[(ngModel)]="selectedModule?.answers[index]" >
+            </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div><button id="submit" >Submit</button></div>

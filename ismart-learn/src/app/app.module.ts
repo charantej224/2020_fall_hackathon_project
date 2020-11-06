@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +11,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import { ModuleOverviewComponent } from './module-overview/module-overview.component'
+import { ModuleOverviewComponent } from './module-overview/module-overview.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { ModuleOverviewComponent } from './module-overview/module-overview.compo
     CourseOverviewComponent,
     HeaderComponent,
     FooterComponent,
-    ModuleOverviewComponent
+    ModuleOverviewComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -28,8 +33,12 @@ import { ModuleOverviewComponent } from './module-overview/module-overview.compo
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
