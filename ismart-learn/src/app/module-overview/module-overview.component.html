@@ -60,5 +60,9 @@
               </video>
               </div>
             </div>
+            <div *ngIf="showAbstract">
+              <a href="javascript:void(0);" (click)="removeWebResults('abstract')">close</a>
+              <p>{{abstract?.summary}}</p>
+            </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

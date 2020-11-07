@@ -20,6 +20,8 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
   showWebResult = false;
   value = "";
   videovalue = "";
+  abstract: any;
+  showAbstract = false;
 
   constructor(private courseService: CourseService,
     private renderer: Renderer2,
@@ -86,7 +88,11 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
 
   sendContent(content) {
     if (content !== null && typeof content !== 'undefined') {
-      this.courseService.postAbstarct(content);
+      this.courseService.postAbstarct({'content': content}).subscribe(result => {
+        console.log(result);
+        this.abstract = result;
+        this.showAbstract = true;
+      });
     }
     
   }
@@ -94,8 +100,10 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
   removeWebResults(closediv) {
     if (closediv === 'link') {
       this.showWebResult = false;
-    } else {
+    } else if (closediv === 'video') {
       this.showVideo = false;
+    } else {
+      this.showAbstract = false;
     }
     
   }

@@ -32,11 +32,9 @@ export class CourseService {
   }
 
   // send abstract content 
-  postAbstarct(content: string) {
+  postAbstarct(content: any) {
     const headers = { 'content-type': 'application/json'}  
-    return this.httpClient.post('http://127.0.0.1:5000/api/v1/article/summary', content, {'headers':headers}).subscribe(result => {
-      console.log(result);
-    });
+    return this.httpClient.post('http://127.0.0.1:5000/api/v1/article/summary', content, {'headers':headers});
   }
 
 }
