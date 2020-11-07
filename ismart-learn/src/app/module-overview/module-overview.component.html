@@ -38,7 +38,8 @@
               {{selectedModule?.content}}
             </div>
             <div class="col-sm-10 ml-3" *ngFor="let question of selectedModule?.questions">
-              <p id=question-{{index}}>{{question}}</p>
+              <br/>
+              <p id=question-{{index}}><b>{{question}}</b></p>
             </div>
             <div class="col-sm-10 ml-3" *ngFor= "let answer of selectedModule?.inputAnswers;let index=index">
               <input id=answer-{{index}} type="text" style="width: 1000px;" (keyup)="_keyUp($event)" [(ngModel)]="selectedModule?.inputAnswers[index]" >
