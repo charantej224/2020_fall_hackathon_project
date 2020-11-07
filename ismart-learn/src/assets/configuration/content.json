@@ -4,22 +4,64 @@
         "notes": "This course is about machine learning algorithms and its use to build the models.",
         "modules": {
             "module1": {
-                "name":"Classification Problem",
-                "content": "In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.Examples of classification problems include:Given an example, classify if it is spam or not.Given a handwritten character, classify it as one of the known characters. Given recent user behavior, classify as churn or not.From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.",
-                "questions": ["what is classification"],
-                "answers": ["classification refers to a predictive modeling problem"]
+                "name": "Classification",
+                "content": "In statistics, classification is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known. Examples are assigning a given email to the \"spam\" or \"non-spam\" class, and assigning a diagnosis to a given patient based on observed characteristics of the patient (sex, blood pressure, presence or absence of certain symptoms, etc.). Classification is an example of pattern recognition.",
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
             },
             "module2": {
-                "name":"Classification Problem",
+                "name": "Types of Classifications",
                 "content": "In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.Examples of classification problems include:Given an example, classify if it is spam or not.Given a handwritten character, classify it as one of the known characters. Given recent user behavior, classify as churn or not.From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.",
-                "questions": ["what is classification"],
-                "answers": ["classification refers to a predictive modeling problem"]
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
             },
             "module3": {
-                "name":"Classification Problem",
-                "content": "In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.Examples of classification problems include:Given an example, classify if it is spam or not.Given a handwritten character, classify it as one of the known characters. Given recent user behavior, classify as churn or not.From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.",
-                "questions": ["what is classification"],
-                "answers": ["classification refers to a predictive modeling problem"]
+                "name": "Binary Classification",
+                "content": "Typically, binary classification tasks involve one class that is the normal state and another class that is the abnormal state.For example “not spam” is the normal state and “spam” is the abnormal state. Another example is “cancer not detected” is the normal state of a task that involves a medical test and “cancer detected” is the abnormal state.The class for the normal state is assigned the class label 0 and the class with the abnormal state is assigned the class label 1.It is common to model a binary classification task with a model that predicts a Bernoulli probability distribution",
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
+            },
+            "module4": {
+                "name": "Multi-Class Classification",
+                "content": "Typically, binary classification tasks involve one class that is the normal state and another class that is the abnormal state.For example “not spam” is the normal state and “spam” is the abnormal state. Another example is “cancer not detected” is the normal state of a task that involves a medical test and “cancer detected” is the abnormal state.The class for the normal state is assigned the class label 0 and the class with the abnormal state is assigned the class label 1.It is common to model a binary classification task with a model that predicts a Bernoulli probability distribution",
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
+            },
+            "module5": {
+                "name": "Multi-Label Classification",
+                "content": "Typically, binary classification tasks involve one class that is the normal state and another class that is the abnormal state.For example “not spam” is the normal state and “spam” is the abnormal state. Another example is “cancer not detected” is the normal state of a task that involves a medical test and “cancer detected” is the abnormal state.The class for the normal state is assigned the class label 0 and the class with the abnormal state is assigned the class label 1.It is common to model a binary classification task with a model that predicts a Bernoulli probability distribution",
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
+            },
+            "module6": {
+                "name": "Imbalanced Classification",
+                "content": "Typically, binary classification tasks involve one class that is the normal state and another class that is the abnormal state.For example “not spam” is the normal state and “spam” is the abnormal state. Another example is “cancer not detected” is the normal state of a task that involves a medical test and “cancer detected” is the abnormal state.The class for the normal state is assigned the class label 0 and the class with the abnormal state is assigned the class label 1.It is common to model a binary classification task with a model that predicts a Bernoulli probability distribution",
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
             }
         }
     },
@@ -28,22 +70,34 @@
         "notes": "This course is about machine learning algorithms and its use to build the models.",
         "modules": {
             "module1": {
-                "name":"Classification Problem",
+                "name": "Classification",
                 "content": "In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.Examples of classification problems include:Given an example, classify if it is spam or not.Given a handwritten character, classify it as one of the known characters. Given recent user behavior, classify as churn or not.From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.",
-                "questions": ["what is classification"],
-                "answers": ["classification refers to a predictive modeling problem"]
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
             },
             "module2": {
-                "name":"Classification Problem",
+                "name": "Types of Classifications",
                 "content": "In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.Examples of classification problems include:Given an example, classify if it is spam or not.Given a handwritten character, classify it as one of the known characters. Given recent user behavior, classify as churn or not.From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.",
-                "questions": ["what is classification"],
-                "answers": ["classification refers to a predictive modeling problem"]
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
             },
             "module3": {
-                "name":"Classification Problem",
+                "name": "Binary Classification",
                 "content": "In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.Examples of classification problems include:Given an example, classify if it is spam or not.Given a handwritten character, classify it as one of the known characters. Given recent user behavior, classify as churn or not.From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.",
-                "questions": ["what is classification"],
-                "answers": ["classification refers to a predictive modeling problem"]
+                "questions": [
+                    "what is classification"
+                ],
+                "answers": [
+                    "classification refers to a predictive modeling problem"
+                ]
             }
         }
     }

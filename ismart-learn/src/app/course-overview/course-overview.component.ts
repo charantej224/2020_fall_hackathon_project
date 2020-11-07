@@ -9,40 +9,33 @@ import { CourseService } from '../course.service';
 })
 export class CourseOverviewComponent implements OnInit {
 
-  contentObj:any;
-  data:string;
+  contentObj: any;
+  data: string;
+  moduleNames: any[] = [];
+  contentData: any;
 
-  constructor(private course: CourseService) {
-   }
+  constructor(private courseService: CourseService) {
+  }
 
   buttonName = 'enable'
   disable = true
 
 
   ngOnInit() {
-    this.course.getContentJson().subscribe(data => {
-      this.contentObj = data;
-      console.log(this.contentObj);
+    this.courseService.getContentJson().subscribe(data => {
+      this.contentData = data;
+      console.log(this.contentData);
+      Object.keys(this.contentData).forEach(key => {
+        let mapValue = {
+          'key': key,
+          'desc': this.contentData[key].notes,
+          'name': this.contentData[key].name
+        };
+        this.moduleNames.push(mapValue);
+
+      })
     });
-  }
 
-  getUserFormValues(userform){
-    console.log(userform)
-    // console.log(userform.email)
-    // console.log(userform.password)
-    // console.log(userform.confirmPassword)
-  }
-
-  toggle() {
-    this.contentObj = this.course.getContentJson();
-    this.data = this.contentObj.name;
-    if(this.disable){
-      this.disable = false;
-      this.buttonName = 'disable';
-    } else{
-      this.disable = true;
-      this.buttonName = 'enable';
-    }
   }
 
 }

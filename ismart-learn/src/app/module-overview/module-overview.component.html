@@ -32,9 +32,9 @@
       <div>
       <mat-list-item>
         <div class="content">
-          <div class="row" *ngFor = "let module of modulesList;let i = index">
+          <div class="row" *ngFor = "let module of moduleNames">
             <div class = "navContent">
-              <b> <a href="javascript:void(0);" (click)="openModule(i)">{{module}}</a></b>
+              <b> <a href="javascript:void(0);" (click)="openModule(module)">{{module}}</a></b>
             </div>
           </div>
         </div> 

@@ -7,15 +7,28 @@ import { Observable } from 'rxjs';
 })
 export class CourseService {
 
-  constructor(private httpClient: HttpClient) { }
+  contentJson: any;
+
+  constructor(private httpClient: HttpClient) {
+    if (!this.contentJson) {
+      this.getContentJson().subscribe(data => {
+        this.contentJson = data;
+        console.log(this.contentJson);
+      });
+    }
+  }
 
   getContentJson(): Observable<any> {
     return this.httpClient.get('assets/configuration/content.json');
   }
 
-  getServiceData(){
+  getServiceData() {
     let url = 'https://jsonplaceholder.typicode.com/todos/';
     return this.httpClient.get(url);
+  }
+
+  returnContentData() {
+    return this.contentJson;
   }
 
 }

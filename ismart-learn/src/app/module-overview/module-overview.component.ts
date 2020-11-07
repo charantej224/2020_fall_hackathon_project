@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { CourseService } from '../course.service';
 import { ActivatedRoute } from '@angular/router';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 
 @Component({
   selector: 'app-module-overview',
@@ -9,14 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ModuleOverviewComponent implements OnInit, AfterViewInit {
 
-  moduleObj: any[] = [];
-  modulesList: any[] = [];
+  moduleNames: string[] = [];
   selectedModule: any;
   contentType: string;
+  moduleData: any;
   constructor(private courseService: CourseService,
-              private renderer: Renderer2,
-              private element: ElementRef,
-              private activatedRoute: ActivatedRoute) {
+    private renderer: Renderer2,
+    private element: ElementRef,
+    private activatedRoute: ActivatedRoute) {
   }
 
   // tslint:disable-next-line: typedef
@@ -24,37 +25,24 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
     this.activatedRoute.queryParams.subscribe(params => {
       this.contentType = params.content;
     });
-    this.courseService.getContentJson().subscribe( data => {
-        if (this.contentType === 'deep_learning') {
-          Object.keys(data.deep_learning.modules).forEach(key => {
-            this.modulesList.push(key);
-            this.moduleObj.push(data.deep_learning.modules[key]);
-          });
-          console.log(this.moduleObj);
-          console.log(this.modulesList);
-        } else {
-          Object.keys(data.machine_learning.modules).forEach(key => {
-            this.modulesList.push(key);
-          this.moduleObj.push(data.machine_learning.modules[key]);
-        });
-        }
-    });
+    const contentData = this.courseService.returnContentData();
+    this.moduleData = contentData[this.contentType].modules
+    console.log(this.moduleData)
+    Object.keys(this.moduleData).forEach((key,index) => {
+      console.log(key)
+      console.log(this.moduleData[key])
+      this.moduleNames.push(this.moduleData[key]['name'])
+  });
   }
 
   ngAfterViewInit() {
     const submit = this.element.nativeElement.querySelector('#submit');
-    this.renderer.listen(submit,'click',(event) => {
+    this.renderer.listen(submit, 'click', (event) => {
       console.log("heloo babe");
     });
   }
-  openModule(navindex) {
-    this.moduleObj.forEach((data,index) => {
-      if(index === navindex) {
-        this.selectedModule = data;
-        console.log(navindex + this.selectedModule);
-      }
-    });
-    
+  openModule(moduleKey) {
+    this.selectedModule = this.moduleData[moduleKey]
   }
 
 }
