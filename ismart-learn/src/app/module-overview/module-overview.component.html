@@ -70,8 +70,17 @@
       <a href="javascript:void(0);" (click)="removeWebResults('abstract')">close</a>
       <p>{{abstract?.summary}}</p>
     </div>
-    <div *ngIf="showResult">
-      <p>"Correct Answer"</p>
+    <div *ngIf="showResult=='correct'">
+      <div class="col-sm-4">
+        <p style="background-color:rgb(30, 211, 24);">"You are correct"</p>
+      </div>
+      <div class="col-sm-4">Confidence {{confidence}}</div>
+    </div>
+    <div *ngIf="showResult=='incorrect'">
+      <div class="col-sm-4">
+        <p style="background-color:rgb(243, 19, 67);">"You are wrong!"</p>
+      </div>
+      <div class="col-sm-4">Confidence {{confidence}}</div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

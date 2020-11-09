@@ -22,7 +22,7 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
   videovalue = "";
   abstract: any;
   showAbstract = false;
-  showResult = false;
+  showResult: any = "";
   confidence: number = 0;
 
   constructor(private courseService: CourseService,
@@ -60,7 +60,11 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
         "actual_answer": this.selectedModule.inputAnswers[0]
       }
       this.courseService.validateAnswer(validateAnswerContent).subscribe(data => {
-        this.showResult = data["is_true"];
+        if (data["is_true"]) {
+          this.showResult = "correct"
+        } else {
+          this.showResult = "incorrect"
+        }
         this.confidence = data["similarity_score"];
       })
       console.log(this.selectedModule);
