@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a13f2c6-eeac-49c1-9d24-453b6b0f0f71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ismart-learn/src/app/module-overview/module-overview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ismart-learn/src/app/module-overview/module-overview.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ismart-learn/src/app/module-overview/module-overview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ismart-learn/src/app/module-overview/module-overview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ismart-learn/src/assets/configuration/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ismart-learn/src/assets/configuration/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ismart-learn/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ismart-learn/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

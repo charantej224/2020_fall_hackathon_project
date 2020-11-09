@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./module-overview.component.css']
 })
 export class ModuleOverviewComponent implements OnInit, AfterViewInit {
- 
+
   moduleNames: any[] = [];
   selectedModule: any;
   contentType: string;
@@ -22,6 +22,8 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
   videovalue = "";
   abstract: any;
   showAbstract = false;
+  showResult = false;
+  confidence: number = 0;
 
   constructor(private courseService: CourseService,
     private renderer: Renderer2,
@@ -42,8 +44,8 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
         console.log(key);
         console.log(this.moduleData[key]);
         let moduleName = {
-          'key':key,
-          'name':this.moduleData[key]['name']
+          'key': key,
+          'name': this.moduleData[key]['name']
         };
         this.moduleNames.push(moduleName);
       });
@@ -53,6 +55,14 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const submit = this.element.nativeElement.querySelector('#submit');
     this.renderer.listen(submit, 'click', (event) => {
+      let validateAnswerContent = {
+        "user_answer": this.selectedModule.answers[0],
+        "actual_answer": this.selectedModule.inputAnswers[0]
+      }
+      this.courseService.validateAnswer(validateAnswerContent).subscribe(data => {
+        this.showResult = data["is_true"];
+        this.confidence = data["similarity_score"];
+      })
       console.log(this.selectedModule);
     });
   }
@@ -65,7 +75,7 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
       // invalid character, prevent input
       event.preventDefault();
     }
-}
+  }
 
   searchWeb(event) {
     console.log(event);
@@ -80,7 +90,7 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
   searchVideo(query) {
     this.showVideo = true;
     this.courseService.getWebvideo(query).subscribe(video => {
-      if (video !==null && typeof video !== 'undefined') {
+      if (video !== null && typeof video !== 'undefined') {
         this.webVideoLinks = video;
       }
     });
@@ -88,13 +98,13 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
 
   sendContent(content) {
     if (content !== null && typeof content !== 'undefined') {
-      this.courseService.postAbstarct({'content': content}).subscribe(result => {
+      this.courseService.postAbstarct({ 'content': content }).subscribe(result => {
         console.log(result);
         this.abstract = result;
         this.showAbstract = true;
       });
     }
-    
+
   }
 
   removeWebResults(closediv) {
@@ -105,7 +115,7 @@ export class ModuleOverviewComponent implements OnInit, AfterViewInit {
     } else {
       this.showAbstract = false;
     }
-    
+
   }
 
   openModule(moduleKey) {
